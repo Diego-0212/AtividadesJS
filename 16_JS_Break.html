@@ -3,22 +3,15 @@
 
 <html xmlns ="http://www.w3.org./1999/xhtml">
     <head>
-        <title>Do While</title>
+        <title> Escolhas Switch - Break</title>
         <script type="text/javascript">
-
-            var contador = 1;
-
-            do{
-                document.writeln("<h" + contador + "> este é um h" + contador + "Nivel de Head" + "</h" +
-                contador + ">");
+            for (var contador = 1; contador <= 10; contador++) {
+                if (contador == 5)
+                    break;
                 
-                ++contador;
-
-            } while(contador <= 6)
-           
-
-            
-
+                document.writeln("Contador é: " + contador + "<br />");
+            }
+            document.writeln("Contador parou no: " + contador);
         </script>
     </head>
 
