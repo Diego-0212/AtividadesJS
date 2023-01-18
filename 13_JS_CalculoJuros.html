@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTM 1.0 Strict//BR" "http://www.w3.org/TR/xhrml1/DTD/html1-strict.dtd">
+
+<html xmlns ="http://www.w3.org./1999/xhtml">
+    <head>
+        <title> Calculos </title>
+        <style type = "text/css">
+            table {width: 70%;
+            margin: 0 auto;
+            background-image:  linear-gradient(90deg, blue, red);
+            color: white;
+            font-weight: 500;
+            font-size: 19px;
+            border-radius: 10px;}
+            th {text-align: left}
+        </style>
+        <script type="text/javascript">
+
+            var total;
+            var principal = 1000.00
+            var taxaJuros = .05;
+
+            document.writeln("<table border=\"1\">");
+            document.writeln("<caption>Calculo do Juros Composto</caption>");
+            document.writeln("<thead><tr><th>Ano</th>");
+            document.writeln("<th>Total</th>");
+            document.writeln("</th></thead><tbody>");
+
+            for (var ano =1; ano <= 10; ++ano){
+                total = principal * Math.pow(1.0 + taxaJuros, ano);
+                document.writeln( "<tr><td>" + ano + "</td><td>" + total.toFixed(2) + "</td></tr>" );
+            }   
+        document.writeln( "</tbody></table>");
+
+    
+
+        </script>
+    </head>
+
+    <body>
+        <p>Click Refresh (ou reload) para executar este script agora</p>
+    </body>
+</html>
